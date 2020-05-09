@@ -4,36 +4,271 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-height: 8.5em;
+}
+
 body {
     position: relative;
     min-width: 320px;
     width: 100%;
     background-color: #eee;
     font-family: 'Lato', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-#header-img {
-    width: 300px;
 }
 
 header {
     position: fixed;
     top: 0;
-    /*width: 100%;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
+    width: 100%;
+    min-width: 320px;
+    height: var(--header-height);
     background-color: #eee;
+    z-index: 1;
+    padding: 0 20px;
 }
 
-.logo {
+div.logo {
+    margin: 15px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    margin: 10px 0 0;
+    display: flex;
+    padding: 0 50px;
+}
+
+#header-img {
+    width: 100%;
+    max-width: 300px;
     margin: auto;
 }
 
-#hero {
-    margin-top: 120px;
+ul {
+    margin: auto;
+    text-align: center;
 }
+
+li {
+    list-style: none;
+    padding-bottom: 5px;
+    margin: auto;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+p {
+    padding: 5px;
+}
+
+#hero {
+    margin-top: var(--header-height);
+    /*background-color: pink;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero input[type="email"] {
+    width: 100%;
+    max-width: 275px;
+    padding: 5px;
+
+}
+
+#hero input[type="submit"] {
+    padding: 0 20px;
+    font-weight: 900;
+}
+
+.btn {
+    padding: 0 20px;
+    margin: 15px 0;
+    height: 40px;
+    font-size: 1em;
+    text-transform: uppercase;
+    border: 3px solid #f1c40f;
+    border-radius: 2px;
+    background-color: #f1c40f;
+    cursor: pointer;
+}
+
+
+#hero, #features, #how-it-works, #pricing{
+    scroll-margin-top: var(--header-height);
+}
+
+#features {
+    /*background-color: cyan;*/
+}
+
+#features .icon {
+    display: none;
+}
+
+.grid {
+    margin: 20px 0;
+}
+
+#how-it-works {
+    /*background-color: blue;*/
+    margin: 20px 0;
+}
+
+video {
+    width: 100%;
+    min-width: 300px;
+}
+
+#pricing {
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0;
+}
+
+.product {
+    width: 80%;
+    max-width: 300px;
+    margin: 10px 0 0;
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.level {
+    background-color: #ddd;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+footer {
+    padding: 5px 0;
+    background-color: #ddd;
+}
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+footer ul li {
+    margin: 0;
+    padding: 0 10px;
+}
+
+footer span {
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+}
+
+@media (min-width: 551px) {
+
+    .grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .desc {
+        width: 80vw;
+    }
+
+    .desc h2 {
+        text-align: left;
+        padding-left: 5px;
+        padding-bottom: 0px;
+    }
+
+    .desc p {
+        padding-right: 10px;
+    }
+
+    #features .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 125px;
+        width: 20vw;
+        min-width: 100px;
+    }
+
+    svg {
+        height: 48px;
+        fill: #ff8c00;
+    }
+
+}
+
+@media (min-width: 651px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #nav-bar {
+        padding: 0;
+    }
+
+    div.logo {
+    margin-left: 15px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul li {
+        padding: 10px 10px 0;
+    }
+
+}
+
+@media (min-width: 801px) {
+
+    #pricing {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .product {
+        width: calc(100% / 3);
+        margin: 10px;
+        max-width: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
